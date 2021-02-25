@@ -1,0 +1,26 @@
+{
+  "name": "cat_cafe",
+  "version": "1.0.0",
+  "description": "a restful, full CRUD cat adoption website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessicagallagher/cat_cafe.git"
+  },
+  "author": "Jessica Gallagher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessicagallagher/cat_cafe/issues"
+  },
+  "homepage": "https://github.com/jessicagallagher/cat_cafe#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.11.18"
+  }
+}
