@@ -1,0 +1,44 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Montserrat&display=swap');
+
+:root {
+  --turqoise: #66bfbf;
+  --turqoise-lt: #eaf6f6;
+  --offwhite: #fcfefe;
+  --pink: #f76b8a;
+  --black-lt: #212121;
+  --grey-dk: #757575;
+  --grey: #BDBDBD;
+  --black: #000000;
+  --main-font-family: 'Montserrat', sans-serif;
+  --accent-font-family: 'Just Another Hand', cursive;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--turqoise-lt);
+  font-family: var(--main-font-family);
+}
+
+.navbar {
+  background: var(--grey);
+  box-shadow:
+    0 0.6px 2.2px rgba(0, 0, 0, 0.02),
+    0 1.5px 5.3px rgba(0, 0, 0, 0.028),
+    0 2.9px 10px rgba(0, 0, 0, 0.035),
+    0 5.1px 17.9px rgba(0, 0, 0, 0.042),
+    0 9.6px 33.4px rgba(0, 0, 0, 0.05),
+    0 23px 80px rgba(0, 0, 0, 0.07);
+}
+
+#logo {
+  background-size: cover;
+  background: url(/images/logo.png) no-repeat center;
+  height: 75px;
+  margin-left: 1em;
+  width: 61px;
+}

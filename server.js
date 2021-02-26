@@ -12,7 +12,7 @@ const databaseName = 'cat_cafe';
 const catController = require('./controllers/cats.js');
 
 // database config
-mongoose.connect(`mongodb://localhost:27017/${databaseName}`, { useNewUrlParser: true });
+mongoose.connect(`mongodb://localhost:27017/${databaseName}`, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 mongoose.connection.once('open', () => {
 	console.log('connected to mongo');
 });

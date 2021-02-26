@@ -1,6 +1,6 @@
 // dependencies
 const express = require('express');
-const router = express.Router();
+const cats = express.Router();
 
 // models
 const Cat = require('../models/catschema.js');
@@ -8,8 +8,8 @@ const Cat = require('../models/catschema.js');
 /*~~~~~ routes ~~~~~*/
 
 // index
-router.get('/', (req, res) => {
-	res.send('hello i work!');
+cats.get('/', (req, res) => {
+	res.render('cats/index.ejs');
 });
 
-module.exports = router;
+module.exports = cats;
