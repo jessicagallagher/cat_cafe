@@ -9,7 +9,9 @@ const Cat = require('../models/catschema.js');
 
 // index
 cats.get('/', (req, res) => {
-	res.render('cats/index.ejs');
+	res.render('index.ejs', {
+		tabTitle: 'Home'
+	});
 });
 
 module.exports = cats;

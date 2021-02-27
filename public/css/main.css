@@ -24,8 +24,12 @@ body {
   font-family: var(--main-font-family);
 }
 
+a:hover {
+  color: var(--turqoise) !important;
+}
+
 .navbar {
-  background: var(--grey);
+  background: var(--grey-dk);
   box-shadow:
     0 0.6px 2.2px rgba(0, 0, 0, 0.02),
     0 1.5px 5.3px rgba(0, 0, 0, 0.028),
@@ -36,9 +40,43 @@ body {
 }
 
 #logo {
-  background-size: cover;
   background: url(/images/logo.png) no-repeat center;
+  background-size: cover;
   height: 75px;
-  margin-left: 1em;
+  margin-top: 5px;
   width: 61px;
+}
+
+.navbar-item {
+  color: var(--pink);
+  font-family: var(--accent-font-family);
+  font-size: 3em;
+  text-decoration: none;
+}
+
+#hero {
+  background: url(/images/hero.JPG) no-repeat center;
+  background-size: cover;
+  box-shadow:
+    0 0.6px 2.2px rgba(0, 0, 0, 0.02),
+    0 1.5px 5.3px rgba(0, 0, 0, 0.028),
+    0 2.9px 10px rgba(0, 0, 0, 0.035),
+    0 5.1px 17.9px rgba(0, 0, 0, 0.042),
+    0 9.6px 33.4px rgba(0, 0, 0, 0.05),
+    0 23px 80px rgba(0, 0, 0, 0.07);
+  height: 400px;
+}
+
+.title {
+  color: white;
+  font-family: var(--main-font-family);
+  font-size: 3em;
+  text-align: center;
+}
+
+.subtitle {
+  color: white;
+  font-family: var(--main-font-family);
+  font-size: 1.5em;
+  text-align: center;
 }
