@@ -21,4 +21,11 @@ cats.get('/new', (req, res) => {
 	});
 });
 
+// create
+cats.post('/', (req, res) => {
+	Cat.create(req.body, (err, createdCat) => {
+		res.redirect('/cats');
+	});
+});
+
 module.exports = cats;
