@@ -28,15 +28,6 @@ a:hover {
   color: var(--turqoise) !important;
 }
 
-form {
-  margin: 0 auto;
-}
-
-button {
-  background: var(--grey-dk) !important;
-  color: var(--offwhite) !important;
-}
-
 .navbar {
   background: var(--grey-dk);
   box-shadow:
@@ -48,36 +39,11 @@ button {
     0 23px 80px rgba(0, 0, 0, 0.07);
 }
 
-#logo {
-  background: url(/images/logo.png) no-repeat center;
-  background-size: cover;
-  height: 75px;
-  margin-top: 5px;
-  width: 61px;
-}
-
 .navbar-item {
   color: var(--pink);
   font-family: var(--accent-font-family);
   font-size: 3em;
   text-decoration: none;
-}
-
-.field {
-  margin: auto !important;
-}
-
-#hero {
-  background: url(/images/hero.JPG) no-repeat center;
-  background-size: cover;
-  box-shadow:
-    0 0.6px 2.2px rgba(0, 0, 0, 0.02),
-    0 1.5px 5.3px rgba(0, 0, 0, 0.028),
-    0 2.9px 10px rgba(0, 0, 0, 0.035),
-    0 5.1px 17.9px rgba(0, 0, 0, 0.042),
-    0 9.6px 33.4px rgba(0, 0, 0, 0.05),
-    0 23px 80px rgba(0, 0, 0, 0.07);
-  height: 400px;
 }
 
 .title {
@@ -105,6 +71,38 @@ button {
   text-align: center;
 }
 
+.field {
+  margin: auto !important;
+}
+
+.for-inputs {
+  color: var(--black-lt);
+  font-family: var(--main-font-family);
+  font-size: 1em;
+  font-weight: 700;
+}
+
+#logo {
+  background: url(/images/logo.png) no-repeat center;
+  background-size: cover;
+  height: 75px;
+  margin-top: 5px;
+  width: 61px;
+}
+
+#hero {
+  background: url(/images/hero.JPG) no-repeat center;
+  background-size: cover;
+  box-shadow:
+    0 0.6px 2.2px rgba(0, 0, 0, 0.02),
+    0 1.5px 5.3px rgba(0, 0, 0, 0.028),
+    0 2.9px 10px rgba(0, 0, 0, 0.035),
+    0 5.1px 17.9px rgba(0, 0, 0, 0.042),
+    0 9.6px 33.4px rgba(0, 0, 0, 0.05),
+    0 23px 80px rgba(0, 0, 0, 0.07);
+  height: 400px;
+}
+
 #my-footer {
   color: var(--grey-dk);
   font-family: var(--accent-font-family);
@@ -117,4 +115,32 @@ button {
   height: 75px;
   margin: 0 auto;
   width: 61px;
+}
+
+#submit-button {
+  background: var(--grey-dk);
+  box-shadow:
+    0 0.6px 2.2px rgba(0, 0, 0, 0.02),
+    0 1.5px 5.3px rgba(0, 0, 0, 0.028),
+    0 2.9px 10px rgba(0, 0, 0, 0.035),
+    0 5.1px 17.9px rgba(0, 0, 0, 0.042),
+    0 9.6px 33.4px rgba(0, 0, 0, 0.05),
+    0 23px 80px rgba(0, 0, 0, 0.07);
+  color: var(--offwhite);
+  font-family: var(--main-font-family);
+  font-weight: 700;
+}
+
+#submit-button:hover {
+  background: var(--pink);
+  box-shadow:
+    0 0.6px 2.2px rgba(0, 0, 0, 0.02),
+    0 1.5px 5.3px rgba(0, 0, 0, 0.028),
+    0 2.9px 10px rgba(0, 0, 0, 0.035),
+    0 5.1px 17.9px rgba(0, 0, 0, 0.042),
+    0 9.6px 33.4px rgba(0, 0, 0, 0.05),
+    0 23px 80px rgba(0, 0, 0, 0.07);
+  color: var(--offwhite);
+  font-family: var(--main-font-family);
+  font-weight: 700;
 }
