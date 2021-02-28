@@ -14,4 +14,11 @@ cats.get('/', (req, res) => {
 	});
 });
 
+// new
+cats.get('/new', (req, res) => {
+	res.render('new.ejs', {
+		tabTitle: 'Add a Cat'
+	});
+});
+
 module.exports = cats;

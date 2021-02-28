@@ -28,6 +28,15 @@ a:hover {
   color: var(--turqoise) !important;
 }
 
+form {
+  margin: 0 auto;
+}
+
+button {
+  background: var(--grey-dk) !important;
+  color: var(--offwhite) !important;
+}
+
 .navbar {
   background: var(--grey-dk);
   box-shadow:
@@ -52,6 +61,10 @@ a:hover {
   font-family: var(--accent-font-family);
   font-size: 3em;
   text-decoration: none;
+}
+
+.field {
+  margin: auto !important;
 }
 
 #hero {
@@ -83,6 +96,13 @@ a:hover {
 
 .footer {
   background: var(--turqoise);
+}
+
+.intake-title {
+  color: var(--turqoise);
+  font-family: var(--accent-font-family);
+  font-size: 3em;
+  text-align: center;
 }
 
 #my-footer {
