@@ -1,6 +1,9 @@
 {
   "name": "cat_cafe",
   "version": "1.0.0",
+  "engines": {
+    "node": "15.10.0"
+  },
   "description": "a restful, full CRUD cat adoption website",
   "main": "server.js",
   "scripts": {
@@ -18,6 +21,7 @@
   },
   "homepage": "https://github.com/jessicagallagher/cat_cafe#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "method-override": "^3.0.0",
