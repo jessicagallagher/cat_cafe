@@ -16,7 +16,11 @@
       <p id="show-text"><strong>Age: </strong> <%=cats.ageYears%> years + <%=cats.ageMonths%> months</p><br>
       <p id="show-text"><strong>About <%=cats.name%>: </strong><%=cats.description%></p>
       <!-- send an edit request -->
-      <a href="/cats/<%=cats.id%>/edit">Edit</a>
+      <a class="showpage-controls" href="/cats/<%=cats.id%>/edit"><input class="button my-4" id="delete-button" type="submit" value="Edit"></a>
+      <!-- send a delete request -->
+      <form action="/cats/<%=cats.id%>?_method=delete" method="post">
+        <input class="button my-4" id="delete-button" type="submit" value="Delete">
+      </form>
     </div>
   </div>
   <%- include ('./partials/footer.ejs') %>

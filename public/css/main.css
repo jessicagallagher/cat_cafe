@@ -60,7 +60,7 @@ img {
     0 23px 80px rgba(0, 0, 0, 0.07);
 }
 
-.navbar-item {
+.navbar-item, .showpage-controls {
   color: var(--pink);
   font-family: var(--accent-font-family);
   font-size: 3em;
@@ -232,6 +232,36 @@ img {
 #show-text {
   text-align: justify;
   margin-right: 6em;
+}
+
+#delete-button {
+  background: var(--grey-dk);
+  box-shadow:
+    0 0.6px 2.2px rgba(0, 0, 0, 0.02),
+    0 1.5px 5.3px rgba(0, 0, 0, 0.028),
+    0 2.9px 10px rgba(0, 0, 0, 0.035),
+    0 5.1px 17.9px rgba(0, 0, 0, 0.042),
+    0 9.6px 33.4px rgba(0, 0, 0, 0.05),
+    0 23px 80px rgba(0, 0, 0, 0.07);
+  color: var(--offwhite);
+  cursor: pointer;
+  font-family: var(--main-font-family);
+  font-weight: 700;
+}
+
+#delete-button:hover {
+  background: var(--turqoise);
+  box-shadow:
+    0 0.6px 2.2px rgba(0, 0, 0, 0.02),
+    0 1.5px 5.3px rgba(0, 0, 0, 0.028),
+    0 2.9px 10px rgba(0, 0, 0, 0.035),
+    0 5.1px 17.9px rgba(0, 0, 0, 0.042),
+    0 9.6px 33.4px rgba(0, 0, 0, 0.05),
+    0 23px 80px rgba(0, 0, 0, 0.07);
+  color: var(--offwhite);
+  cursor: pointer;
+  font-family: var(--main-font-family);
+  font-weight: 700;
 }
 
 @keyframes fade-in {

@@ -61,4 +61,11 @@ cats.put('/:id', (req, res) => {
 	});
 });
 
+// delete
+cats.delete('/:id', (req, res) => {
+	Cat.findByIdAndRemove(req.params.id, (err, deletedCat) => {
+		res.redirect('/cats');
+	});
+});
+
 module.exports = cats;
