@@ -211,6 +211,17 @@ img {
   font-weight: 700;
 }
 
+#show {
+  cursor: auto;
+  height: 20em;
+  max-width: 20em;
+}
+
+#show-text {
+  text-align: justify;
+  margin-right: 6em;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;

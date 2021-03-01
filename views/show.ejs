@@ -5,6 +5,20 @@
   </head>
   <body class="has-navbar-fixed-top has-spaced-navbar-fixed-top">
     <%- include ('./partials/nav.ejs') %>
+    <h1 class="mt-5" id="index-page"><%=cats.name%></h1>
+    <div class="page-wrapper">
+
+      <div class="column">
+        <img id="show" src="<%=cats.img%>">
+      </div>
+      <div class="column" id="show-text">
+
+  <p id="show-text">Age: <%=cats.ageYears%> years + <%=cats.ageMonths%> months</p><br>
+  <p id="show-text">About <%=cats.name%>: <%=cats.description%></p>
+
+      </div>
+
+    </div>
     <%- include ('./partials/footer.ejs') %>
   </body>
 </html>
