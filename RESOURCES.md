@@ -7,7 +7,7 @@ Those are my actual cats.
 # Fonts
 [Google Fonts](https://fonts.google.com)
 # Colors
-[Palette List](https://palettelist.com)
+[Palette List](https://palettelist.com)  
 [WebGradients](https://webgradients.com/)
 # Cat Descriptions
 All cat descriptions were taken from [The Brooklyn Cat Cafe's](https://catcafebk.com) adoption website (other than Wiz and Max--those are my actual cats).
