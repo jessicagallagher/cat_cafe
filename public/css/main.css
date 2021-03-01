@@ -145,6 +145,10 @@ img {
   font-weight: 700;
 }
 
+.column {
+  animation: fade-in 1s ease;
+}
+
 #logo {
   background: url(/images/logo.png) no-repeat center;
   background-size: cover;
