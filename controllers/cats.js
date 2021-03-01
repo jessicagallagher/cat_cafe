@@ -10,7 +10,7 @@ const Cat = require('../models/catschema.js');
 // index
 cats.get('/', (req, res) => {
 	Cat.find({}, (error, allCats) => {
-		res.render('index.ejs', {
+		res.render('cats/index.ejs', {
 			tabTitle: 'Home',
 			cats: allCats
 		});
@@ -19,7 +19,7 @@ cats.get('/', (req, res) => {
 
 // new
 cats.get('/new', (req, res) => {
-	res.render('new.ejs', {
+	res.render('cats/new.ejs', {
 		tabTitle: 'Add a Cat'
 	});
 });
@@ -34,7 +34,7 @@ cats.post('/', (req, res) => {
 // show
 cats.get('/:id', (req, res) => {
 	Cat.findById(req.params.id, (err, foundCat) => {
-		res.render('show.ejs', {
+		res.render('cats/show.ejs', {
 			tabTitle: foundCat.name,
 			cats: foundCat
 		});
@@ -44,7 +44,7 @@ cats.get('/:id', (req, res) => {
 // edit
 cats.get('/:id/edit', (req, res) => {
 	Cat.findById(req.params.id, (err, foundCat) => {
-		res.render('edit.ejs', {
+		res.render('cats/edit.ejs', {
 			tabTitle: foundCat.name,
 			cats: foundCat
 		});
@@ -54,7 +54,7 @@ cats.get('/:id/edit', (req, res) => {
 // update
 cats.put('/:id', (req, res) => {
 	Cat.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedCat) => {
-		res.render('show.ejs', {
+		res.render('cats/show.ejs', {
 			tabTitle: updatedCat.name,
 			cats: updatedCat
 		});
