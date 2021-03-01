@@ -15,21 +15,34 @@
 }
 
 html, body {
-  height: 100%;
-  margin: 0;
+  height: 100% !important;
+  margin: 0 !important;
 }
 
 body {
   background: var(--turqoise-lt);
   font-family: var(--main-font-family);
+  height: 100% !important;
+  margin: 0 !important;
 }
 
 a:hover {
   color: var(--turqoise) !important;
 }
 
+img {
+  cursor: pointer;
+  display: block;
+  height: 12em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  max-width: 12em;
+}
+
 .navbar {
-  background: var(--grey-dk);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
+  background-blend-mode: multiply, multiply;
   box-shadow:
     0 0.6px 2.2px rgba(0, 0, 0, 0.02),
     0 1.5px 5.3px rgba(0, 0, 0, 0.028),
@@ -57,6 +70,52 @@ a:hover {
   color: white;
   font-family: var(--main-font-family);
   font-size: 1.5em;
+  text-align: center;
+}
+
+.page-wrapper {
+  background: var(--turqoise-lt);
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+
+.page-content {
+  animation: fade-in 1s ease;
+  background: var(--turqoise-lt);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.each-item {
+  align-items: center;
+  background: var(--offwhite);
+  border-radius: 15px;
+  box-shadow:
+    0 0.6px 2.2px rgba(0, 0, 0, 0.02),
+    0 1.5px 5.3px rgba(0, 0, 0, 0.028),
+    0 2.9px 10px rgba(0, 0, 0, 0.035),
+    0 5.1px 17.9px rgba(0, 0, 0, 0.042),
+    0 9.6px 33.4px rgba(0, 0, 0, 0.05),
+    0 23px 80px rgba(0, 0, 0, 0.07);
+  color: var(--black-lt);
+  display: flex;
+  flex-direction: column;
+  height: 22em;
+  margin: 1em;
+  padding: 1em;
+  width: 22em;
+}
+
+.each-item:hover {
+  border: 1px solid var(--turqoise);
+}
+
+.each-name {
+  color: var(--turqoise);
+  font-size: 2em;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -103,6 +162,13 @@ a:hover {
   height: 400px;
 }
 
+#index-page {
+  color: var(--pink);
+  font-family: var(--accent-font-family);
+  font-size: 3em;
+  text-align: center;
+}
+
 #my-footer {
   color: var(--grey-dk);
   font-family: var(--accent-font-family);
@@ -143,4 +209,26 @@ a:hover {
   color: var(--offwhite);
   font-family: var(--main-font-family);
   font-weight: 700;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-40px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }

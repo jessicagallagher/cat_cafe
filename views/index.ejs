@@ -13,8 +13,21 @@
       <p class="subtitle">39 Carroll St | Brooklyn, NY | 718.555.5555</p>
     </div>
   </section>
-  <h1>another test</h1>
-  <h1>another test</h1>
+  <h1 class="mt-5" id="index-page">Meet Our Cats</h1>
+  <div class="page-wrapper">
+    <section class="page-content">
+      <% for (let i = 0; i < cats.length; i++) { %>
+      <a href="/cats/<%=cats[i].id%>">
+        <div class="each-item">
+          <p class="each-name">
+            <%= cats[i].name %>
+          </p>
+          <a href="/cats/<%=cats[i].id%>"><img src="<%=cats[i].img%>"></a>
+        </div>
+      </a>
+      <% } %>
+    </section>
+  </div>
   <%- include ('./partials/footer.ejs') %>
 </body>
 
