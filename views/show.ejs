@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <%- include ('./partials/head.ejs') %>
-  </head>
-  <body class="has-navbar-fixed-top has-spaced-navbar-fixed-top">
-    <%- include ('./partials/nav.ejs') %>
-    <h1 class="mt-5" id="index-page"><%=cats.name%></h1>
-    <div class="page-wrapper">
 
-      <div class="column">
-        <img id="show" src="<%=cats.img%>">
-      </div>
-      <div class="column" id="show-text">
+<head>
+  <%- include ('./partials/head.ejs') %>
+</head>
 
-  <p id="show-text"><strong>Age: </strong> <%=cats.ageYears%> years + <%=cats.ageMonths%> months</p><br>
-  <p id="show-text"><strong>About <%=cats.name%>: </strong><%=cats.description%></p>
-<!-- send an edit request -->
-<a href="/cats/<%=cats.id%>/edit">Edit</a>
-      </div>
-
+<body class="has-navbar-fixed-top has-spaced-navbar-fixed-top">
+  <%- include ('./partials/nav.ejs') %>
+  <h1 class="mt-5" id="index-page"><%=cats.name%></h1>
+  <div class="page-wrapper">
+    <div class="column">
+      <img id="show" src="<%=cats.img%>">
     </div>
-    <%- include ('./partials/footer.ejs') %>
-  </body>
+    <div class="column" id="show-text">
+      <p id="show-text"><strong>Age: </strong> <%=cats.ageYears%> years + <%=cats.ageMonths%> months</p><br>
+      <p id="show-text"><strong>About <%=cats.name%>: </strong><%=cats.description%></p>
+      <!-- send an edit request -->
+      <a href="/cats/<%=cats.id%>/edit">Edit</a>
+    </div>
+  </div>
+  <%- include ('./partials/footer.ejs') %>
+</body>
+
 </html>

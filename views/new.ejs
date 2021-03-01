@@ -8,7 +8,7 @@
 <body class="has-navbar-fixed-top has-spaced-navbar-fixed-top">
   <%- include ('./partials/nav.ejs') %>
   <h1 class="intake-title my-2">New Cat Intake Form</h1>
-  <%- include ('./partials/intake_form.ejs') %>
+  <%- include ('./partials/intake_form.ejs', {method: 'post'}) %>
   <%- include ('./partials/footer.ejs') %>
 </body>
 
