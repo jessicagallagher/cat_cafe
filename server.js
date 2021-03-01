@@ -6,7 +6,8 @@ const db = mongoose.connection;
 
 // app config
 const app = express();
-const port = process.env.port || 3000;
+require('dotenv').config();
+const port = process.env.port;
 // const databaseName = 'cat_cafe';
 
 // controller
@@ -16,7 +17,7 @@ const catController = require('./controllers/cats.js');
 //Database
 //___________________
 // How to connect to the database either via heroku or locally
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/' + `cat_cafe`;
+const MONGODB_URI = process.env.MONGODB_URI;
 
 // Connect to Mongo
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
