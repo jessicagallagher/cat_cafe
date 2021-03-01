@@ -30,12 +30,6 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 // open the connection to mongo
 db.on('open', () => {});
 
-// database config
-// mongoose.connect(`mongodb://localhost:27017/${databaseName}`, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
-// mongoose.connection.once('open', () => {
-// 	console.log('connected to mongo');
-// });
-
 // middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
