@@ -7,7 +7,7 @@ const db = mongoose.connection;
 // app config
 const app = express();
 require('dotenv').config();
-const port = process.env.port;
+const port = process.env.PORT;
 // const databaseName = 'cat_cafe';
 
 // controller
