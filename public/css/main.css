@@ -30,6 +30,10 @@ a:hover {
   color: var(--turqoise) !important;
 }
 
+a:active {
+  color: var(--offwhite) !important;
+}
+
 img {
   cursor: pointer;
   display: block;
