@@ -69,7 +69,7 @@
 <div class="container">
 
 
-  <form action="/cats/<%cats.id%>?_method=put" method="post">
+  <form action="/cats/<%=cats.id%>?_method=put" method="post">
     <!-- NOTE: the form is pre-populated with values from the server-->
     <div class="field is-horizontal">
       <div class="field-body">
@@ -106,7 +106,7 @@
         <div class="field is-narrow">
           <div class="control">
             <p class="for-inputs">Description:</p>
-            <textarea class="textarea my-2" name="description" value="<%=cats.description%>"></textarea>
+            <textarea class="textarea my-2" name="description"><%=cats.description%></textarea>
           </div>
         </div>
       </div>

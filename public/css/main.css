@@ -34,6 +34,10 @@ a:active {
   color: var(--offwhite) !important;
 }
 
+a:focus {
+  color: var(--offwhite) !important;
+}
+
 img {
   cursor: pointer;
   display: block;

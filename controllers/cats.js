@@ -51,4 +51,14 @@ cats.get('/:id/edit', (req, res) => {
 	});
 });
 
+// update
+cats.put('/:id', (req, res) => {
+	Cat.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedCat) => {
+		res.render('show.ejs', {
+			tabTitle: updatedCat.name,
+			cats: updatedCat
+		});
+	});
+});
+
 module.exports = cats;
