@@ -8,7 +8,9 @@ const isAuthenticated = (req, res, next) => {
 		next();
 	} else {
 		console.log('Unauthenticated request');
-		res.render('sessions/new.ejs');
+		res.render('unauth/index.ejs', {
+			tabTitle: 'Home'
+		});
 	};
 };
 

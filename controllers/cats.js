@@ -7,7 +7,7 @@ const { isAuthenticated } = require('../services/middleware.js');
 const Cat = require('../models/catschema.js');
 
 // middleware for authentication on each route in this controller
-// cats.use(isAuthenticated);
+cats.use(isAuthenticated);
 
 /*~~~~~ routes ~~~~~*/
 

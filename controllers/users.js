@@ -17,7 +17,6 @@ users.get('/new', (req, res) => {
 
 // create
 users.post('/', (req, res) => {
-	console.log(req.body)
 	req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
 
 	User.create(req.body, (err, newUser) => {

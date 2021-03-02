@@ -15,6 +15,7 @@ const port = process.env.PORT;
 const catController = require('./controllers/cats.js');
 const userController = require('./controllers/users.js');
 const sessionsController = require('./controllers/sessions.js');
+const unauthController = require('./controllers/unauth.js');
 
 /*~~~~~ database ~~~~~*/
 
@@ -50,6 +51,7 @@ console.log(process.env.SECRET)
 app.use('/cats', catController);
 app.use('/users', userController);
 app.use('/sessions', sessionsController);
+app.use('/cat', unauthController);
 
 // listener
 app.listen(port, () => {
