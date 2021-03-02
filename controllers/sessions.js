@@ -30,9 +30,7 @@ sessions.post('/', (req, res) => {
 			if(bcrypt.compareSync(req.body.password, foundUser.password)) {
 				// We have a matching password
 				req.session.currentUser = foundUser;
-
 				res.redirect('/cats');
-
 			} else {
 				// passwords don't match
 				res.send('<a href="/">Oops! It looks like that\'s the wrong password! Make sure you type in your password purr-fectly! </a>');
@@ -40,6 +38,7 @@ sessions.post('/', (req, res) => {
 		};
 	});
 });
+
 
 // logout
 sessions.delete('/', (req, res) => {
