@@ -1,0 +1,79 @@
+<% if (method === "post") { %>
+<div class="container section">
+  <form action="/users" method="post">
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <div class="field is-narrow">
+          <div class="control">
+            <p class="for-inputs">First Name:</p>
+            <input class="input my-2" type="text" name="firstName">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <div class="field is-narrow">
+          <div class="control">
+            <p class="for-inputs">User Name:</p>
+            <input class="input my-2" type="text" name="username">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <div class="field is-narrow">
+          <div class="control">
+            <p class="for-inputs">Password:</p>
+            <input class="input my-2" type="text" name="password">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <div class="field is-narrow">
+          <div class="control">
+            <input class="input my-2" id="submit-button" type="submit" value="Submit">
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<% } else { %>
+<div class="container section">
+  <form action="/sessions" method="post">
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <div class="field is-narrow">
+          <div class="control">
+            <p class="for-inputs">User Name:</p>
+            <input class="input my-2" type="text" name="username">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <div class="field is-narrow">
+          <div class="control">
+            <p class="for-inputs">Password:</p>
+            <input class="input my-2" type="text" name="username">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-body">
+        <div class="field is-narrow">
+          <div class="control">
+            <input class="input my-2" id="submit-button" type="submit" value="Submit">
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<% } %>

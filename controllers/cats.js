@@ -1,9 +1,13 @@
 // dependencies
 const express = require('express');
 const cats = express.Router();
+const { isAuthenticated } = require('../services/middleware.js');
 
 // models
 const Cat = require('../models/catschema.js');
+
+// middleware for authentication on each route in this controller
+// cats.use(isAuthenticated);
 
 /*~~~~~ routes ~~~~~*/
 
@@ -27,7 +31,10 @@ cats.get('/new', (req, res) => {
 // create
 cats.post('/', (req, res) => {
 	Cat.create(req.body, (err, createdCat) => {
-		res.redirect('/cats');
+		res.render('cats/show.ejs', {
+			tabTitle: createdCat.name,
+			cats: createdCat
+		});
 	});
 });
 
@@ -63,7 +70,7 @@ cats.put('/:id', (req, res) => {
 
 // delete
 cats.delete('/:id', (req, res) => {
-	Cat.findByIdAndRemove(req.params.id, (err, deletedCat) => {
+	Cat.findByIdAndRemove(req.params.id, { useFindAndModify: false }, (err, deletedCat) => {
 		res.redirect('/cats');
 	});
 });
