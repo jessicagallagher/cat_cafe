@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include ('../partials/head.ejs') %>
+  </head>
+  <body class="has-navbar-fixed-top has-spaced-navbar-fixed-top main">
+    <%- include ('../partials/nav.ejs') %>
+    <!-- refer RESOURCES.md line 16 for credit -->
+    <img class="my-5" id="meowdy" src="/images/meowdy.jpg" alt="cat in a cowboy hat">
+    <h1 class="mt-1" id="index-page">Meowdy, <%=users.firstName%>!</h1>
+    <p>Your next volunteer shift is March <%= Math.floor(Math.random() * (6 - 31) + 31); %>th at <%= Math.floor(Math.random() * (12 - 6) + 6); %> pm sharp!</p>
+    <%- include ('../partials/footer.ejs') %>
+  </body>
+</html>

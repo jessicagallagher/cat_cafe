@@ -9,7 +9,7 @@ const isAuthenticated = (req, res, next) => {
 	} else {
 		console.log('Unauthenticated request');
 		res.render('sessions/new.ejs', {
-			tabTitle: 'Creat an Account'
+			tabTitle: 'Create an Account'
 		});
 	};
 };

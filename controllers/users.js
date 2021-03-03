@@ -21,7 +21,10 @@ users.post('/', (req, res) => {
 
 	User.create(req.body, (err, newUser) => {
 		console.log('user is created: ', newUser);
-		res.redirect('/cats');
+		res.render('users/new_welcome.ejs', {
+			tabTitle: 'Meowdy!',
+			users: newUser
+		});
 	});
 });
 

@@ -7,17 +7,33 @@ const { isAuthenticated } = require('../services/middleware.js');
 const Cat = require('../models/catschema.js');
 
 // middleware for authentication on each route in this controller
-cats.use(isAuthenticated);
+// cats.use(isAuthenticated);
 
 /*~~~~~ routes ~~~~~*/
 
 // index
+// cats.get('/', (req, res) => {
+// 	Cat.find({}, (error, allCats) => {
+// 		res.render('cats/index.ejs', {
+// 			tabTitle: 'Home',
+// 			cats: allCats
+// 		});
+// 	});
+// });
+
 cats.get('/', (req, res) => {
-	Cat.find({}, (error, allCats) => {
-		res.render('cats/index.ejs', {
-			tabTitle: 'Home',
-			cats: allCats
-		});
+	Cat.find({}, (err, allCats) => {
+		if(req.session.currentUser) {
+			res.render('cats/index.ejs', {
+				tabTitle: 'Home',
+				cats: allCats
+			})
+		} else {
+			res.render('cats/unauth_index.ejs', {
+				tabTitle: 'Home',
+				cats: allCats
+			});
+		};
 	});
 });
 
@@ -39,12 +55,28 @@ cats.post('/', (req, res) => {
 });
 
 // show
+// cats.get('/:id', (req, res) => {
+// 	Cat.findById(req.params.id, (err, foundCat) => {
+// 		res.render('cats/show.ejs', {
+// 			tabTitle: foundCat.name,
+// 			cats: foundCat
+// 		});
+// 	});
+// });
+
 cats.get('/:id', (req, res) => {
 	Cat.findById(req.params.id, (err, foundCat) => {
-		res.render('cats/show.ejs', {
-			tabTitle: foundCat.name,
-			cats: foundCat
-		});
+		if(req.session.currentUser) {
+			res.render('cats/show.ejs', {
+				tabTitle: foundCat.name,
+				cats: foundCat
+			})
+		} else {
+			res.render('cats/unauth_show.ejs', {
+				tabTitle: foundCat.name,
+				cats: foundCat
+			});
+		};
 	});
 });
 
