@@ -46,6 +46,11 @@ app.use(
 app.use(logRequest);
 console.log(process.env.SECRET)
 
+// middleware for heroku redirect
+app.get('/', (req, res) => {
+	res.redirect('/cats');
+});
+
 // register controller routes
 app.use('/cats', catController);
 app.use('/users', userController);

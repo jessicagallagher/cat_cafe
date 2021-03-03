@@ -253,8 +253,18 @@ img {
   height: 12em;
   margin-left: auto;
   margin-right: auto;
-  /* margin-top: 3em; */
   max-width: 12em;
+}
+
+#meowdy-text {
+  color: var(--black-lt);
+  font-size: 2em;
+  text-align: center;
+}
+
+#show-password {
+  display: inline;
+  margin-top: -2em !important;
 }
 
 @keyframes fade-in {

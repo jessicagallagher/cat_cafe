@@ -8,7 +8,9 @@
     <!-- refer RESOURCES.md line 16 for credit -->
     <img class="my-5" id="meowdy" src="/images/meowdy.jpg" alt="cat in a cowboy hat">
     <h1 class="mt-1" id="index-page">Meowdy, <%=users.firstName%>!</h1>
-    <p>Your next volunteer shift is March <%= Math.floor(Math.random() * (6 - 31) + 31); %>th at <%= Math.floor(Math.random() * (12 - 6) + 6); %> pm sharp!</p>
+    <p class="mt-3" id="meowdy-text">Your next volunteer shift is March <%= Math.floor(Math.random() * (6 - 31) + 31); %>th at <%= Math.floor(Math.random() * (1 - 6) + 6); %> pm sharp!</p>
+    <div class="section">
+    </div>
     <%- include ('../partials/footer.ejs') %>
   </body>
 </html>
