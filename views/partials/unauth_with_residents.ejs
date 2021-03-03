@@ -1,0 +1,24 @@
+<h1 class="mt-5" id="index-page"><%=cats.name%></h1>
+<% if (cats.name === "Wiz Khatlifa" || "Max Just Max") { %>
+<div class="page-wrapper">
+  <div class="column">
+    <img id="show" src="<%=cats.img%>">
+  </div>
+  <div class="column" id="show-text">
+    <p id="show-text"><strong>Age: </strong> <%=cats.ageYears%> years + <%=cats.ageMonths%> months</p><br>
+    <p id="show-text"><strong>About Our Resident Cat <%=cats.name%>: </strong><%=cats.description%></p>
+  </div>
+</div>
+<% } else { %>
+<div class="page-wrapper">
+  <div class="column">
+    <img id="show" src="<%=cats.img%>">
+  </div>
+  <div class="column" id="show-text">
+    <p id="show-text"><strong>Age: </strong> <%=cats.ageYears%> years + <%=cats.ageMonths%> months</p><br>
+    <p id="show-text"><strong>About <%=cats.name%>: </strong><%=cats.description%></p>
+
+    <% } %>
+
+  </div>
+</div>

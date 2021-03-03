@@ -27,7 +27,7 @@ cats.get('/', (req, res) => {
 			res.render('cats/index.ejs', {
 				tabTitle: 'Home',
 				cats: allCats
-			})
+			});
 		} else {
 			res.render('cats/unauth_index.ejs', {
 				tabTitle: 'Home',
