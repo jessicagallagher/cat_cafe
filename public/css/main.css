@@ -267,6 +267,21 @@ img {
   margin-top: -2em !important;
 }
 
+input#submit {
+  background: none;
+  border: none;
+  color: var(--turqoise);
+  cursor: pointer;
+  font-family: var(--accent-font-family);
+  font-size: 2em;
+  text-decoration: none;
+}
+
+#bye {
+  display: inline;
+  font-size: 1em;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
