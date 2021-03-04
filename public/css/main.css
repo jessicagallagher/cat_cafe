@@ -179,6 +179,12 @@ hr {
   margin-right: 30em;
 }
 
+.pointer {
+  display: inline;
+  font-size: 1.5em;
+  margin-left: 33em;
+}
+
 #logo {
   background: url(/images/logo.png) no-repeat center;
   background-size: cover;
@@ -263,7 +269,7 @@ hr {
   margin-right: 6em;
 }
 
-#meowdy {
+#meowdy, #adopt-confirm {
   border-radius: 10px;
   cursor: auto;
   display: block;
@@ -306,10 +312,12 @@ input#submit {
   text-align: center;
 }
 
-.pointer {
-  display: inline;
+#confirm-text {
+  color: var(--black-lt);
   font-size: 1.5em;
-  margin-left: 33em;
+  font-weight: 500;
+  margin: 2em 9em 3em 9em;
+  text-align: center;
 }
 
 @keyframes fade-in {

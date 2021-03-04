@@ -21,10 +21,16 @@ adopt.get('/new', (req, res) => {
 	};
 });
 
+adopt.get('/confirm', (req, res) => {
+	res.render('cats/adopt_confirm.ejs', {
+		tabTitle: 'Purr-fact!'
+	});
+});
+
 // create
 adopt.post('/', (req, res) => {
 	Adopt.create(req.body, (err, createdAdoption) => {
-		res.send('i work too!')
+		res.redirect('/adopt/confirm')
 	});
 });
 
