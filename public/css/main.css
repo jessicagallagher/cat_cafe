@@ -20,7 +20,7 @@ html, body {
 }
 
 body {
-  background: var(--turqoise-lt);
+  background: var(--turqoise-lt) !important;
   font-family: var(--main-font-family);
 }
 
@@ -52,6 +52,10 @@ hr {
   height: 3px;
   margin-left: 10em;
   margin-right: 10em;
+}
+
+h1 {
+  background: var(--turqoise-lt);
 }
 
 .main {
@@ -183,6 +187,10 @@ hr {
   display: inline;
   font-size: 1.5em;
   margin-left: 33em;
+}
+
+.fill {
+  padding-top: -3em;
 }
 
 #logo {

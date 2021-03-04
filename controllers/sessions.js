@@ -30,10 +30,15 @@ sessions.post('/', (req, res) => {
 			if(bcrypt.compareSync(req.body.password, foundUser.password)) {
 				// We have a matching password
 				req.session.currentUser = foundUser;
-				res.render('users/new_welcome.ejs', {
-					tabTitle: 'Meowdy!',
-					users: foundUser
-				});
+				if(foundUser.userType === "Volunteer") {
+					res.render('users/new_welcome.ejs', {
+						tabTitle: 'Meowdy!',
+						users: foundUser
+					});
+				} else {
+					res.send('hello');
+				}
+
 			} else {
 				// passwords don't match
 				res.send('Oops! It looks like that\'s the wrong password! Make sure that you type in your password purr-fectly! <a href="sessions/new">Meow-ch! Try again!</a>');
