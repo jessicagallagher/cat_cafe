@@ -15,6 +15,7 @@ const port = process.env.PORT;
 const catController = require('./controllers/cats.js');
 const userController = require('./controllers/users.js');
 const sessionsController = require('./controllers/sessions.js');
+const adoptionController = require('./controllers/adopt.js');
 
 /*~~~~~ database ~~~~~*/
 
@@ -55,6 +56,7 @@ app.get('/', (req, res) => {
 app.use('/cats', catController);
 app.use('/users', userController);
 app.use('/sessions', sessionsController);
+app.use('/adopt', adoptionController);
 
 // listener
 app.listen(port, () => {

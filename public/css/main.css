@@ -46,6 +46,14 @@ img {
   max-width: 12em;
 }
 
+hr {
+  border: 0;
+  background-image: linear-gradient(to right, var(--turqoise), var(--pink), var(--turqoise));
+  height: 3px;
+  margin-left: 10em;
+  margin-right: 10em;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -74,6 +82,10 @@ img {
   font-family: var(--accent-font-family);
   font-size: 2em;
   text-decoration: none;
+}
+
+.showpage-controls {
+  display: block;
 }
 
 .title {
@@ -160,6 +172,11 @@ img {
 
 .column {
   animation: fade-in 1s ease;
+}
+
+.special {
+  margin-left: 30em;
+  margin-right: 30em;
 }
 
 #logo {
@@ -280,6 +297,19 @@ input#submit {
 #bye {
   display: inline;
   font-size: 1em;
+}
+
+#for-adoptions {
+  color: var(--black-lt);
+  font-size: 1em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.pointer {
+  display: inline;
+  font-size: 1.5em;
+  margin-left: 33em;
 }
 
 @keyframes fade-in {

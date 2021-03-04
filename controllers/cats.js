@@ -6,20 +6,7 @@ const { isAuthenticated } = require('../services/middleware.js');
 // models
 const Cat = require('../models/catschema.js');
 
-// middleware for authentication on each route in this controller
-// cats.use(isAuthenticated);
-
 /*~~~~~ routes ~~~~~*/
-
-// index
-// cats.get('/', (req, res) => {
-// 	Cat.find({}, (error, allCats) => {
-// 		res.render('cats/index.ejs', {
-// 			tabTitle: 'Home',
-// 			cats: allCats
-// 		});
-// 	});
-// });
 
 cats.get('/', (req, res) => {
 	Cat.find({}, (err, allCats) => {
@@ -37,14 +24,14 @@ cats.get('/', (req, res) => {
 	});
 });
 
-// new
+// new => add a cat
 cats.get('/new', (req, res) => {
 	res.render('cats/new.ejs', {
 		tabTitle: 'Add a Cat'
 	});
 });
 
-// create
+// create => add a cat
 cats.post('/', (req, res) => {
 	Cat.create(req.body, (err, createdCat) => {
 		res.render('cats/show.ejs', {
@@ -55,15 +42,6 @@ cats.post('/', (req, res) => {
 });
 
 // show
-// cats.get('/:id', (req, res) => {
-// 	Cat.findById(req.params.id, (err, foundCat) => {
-// 		res.render('cats/show.ejs', {
-// 			tabTitle: foundCat.name,
-// 			cats: foundCat
-// 		});
-// 	});
-// });
-
 cats.get('/:id', (req, res) => {
 	Cat.findById(req.params.id, (err, foundCat) => {
 		if(req.session.currentUser) {
@@ -80,7 +58,7 @@ cats.get('/:id', (req, res) => {
 	});
 });
 
-// edit
+// edit => edit a cat
 cats.get('/:id/edit', (req, res) => {
 	Cat.findById(req.params.id, (err, foundCat) => {
 		res.render('cats/edit.ejs', {
@@ -90,7 +68,7 @@ cats.get('/:id/edit', (req, res) => {
 	});
 });
 
-// update
+// update => edit a cat
 cats.put('/:id', (req, res) => {
 	Cat.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedCat) => {
 		res.render('cats/show.ejs', {
@@ -100,7 +78,7 @@ cats.put('/:id', (req, res) => {
 	});
 });
 
-// delete
+// delete => delete a cat
 cats.delete('/:id', (req, res) => {
 	Cat.findByIdAndRemove(req.params.id, { useFindAndModify: false }, (err, deletedCat) => {
 		res.redirect('/cats');

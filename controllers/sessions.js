@@ -25,7 +25,7 @@ sessions.post('/', (req, res) => {
 			res.send('Oops! The database hissed at us. Try again when it calms down!');
 		} else if(!foundUser) {
 			// if found user is undefined / null / not found, etc.
-			res.send('Sorry, we couldn\'t find you! Are you sure that you typed in your login credentials purr-fectly? <a href="sessions/new">Meowch! Try again!</a>');
+			res.send('Sorry, we couldn\'t find you! Are you sure that you typed in your login credentials purr-fectly? <a href="sessions/new">Meow-ch! Try again!</a>');
 		} else {
 			if(bcrypt.compareSync(req.body.password, foundUser.password)) {
 				// We have a matching password
@@ -36,7 +36,7 @@ sessions.post('/', (req, res) => {
 				});
 			} else {
 				// passwords don't match
-				res.send('Oops! It looks like that\'s the wrong password! Make sure that you type in your password purr-fectly! <a href="sessions/new">Meowch! Try again!</a>');
+				res.send('Oops! It looks like that\'s the wrong password! Make sure that you type in your password purr-fectly! <a href="sessions/new">Meow-ch! Try again!</a>');
 			};
 		};
 	});
