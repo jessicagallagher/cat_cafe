@@ -22,7 +22,7 @@ users.post('/', (req, res) => {
 	User.create(req.body, (err, newUser) => {
 		console.log('user is created: ', newUser);
 		if(newUser.userType === "Volunteer") {
-			res.redirect('users/new_welcome.ejs', {
+			res.render('users/new_welcome.ejs', {
 				tabTitle: 'Meowdy!',
 				users: newUser
 			});
