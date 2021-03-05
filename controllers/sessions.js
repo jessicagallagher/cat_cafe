@@ -8,7 +8,7 @@ const User = require('../models/users.js');
 
 /*~~~~~ routes ~~~~~*/
 
-// new
+// new => log in to begin session
 sessions.get('/new', (req, res) => {
 	res.render('sessions/new.ejs', {
 		currentUser: req.session.currentUser,
@@ -16,7 +16,7 @@ sessions.get('/new', (req, res) => {
 	});
 });
 
-// create
+// create => conditionals for session creation
 sessions.post('/', (req, res) => {
 	User.findOne({ username: req.body.username }, (err, foundUser) => {
 		// db error
@@ -40,8 +40,7 @@ sessions.post('/', (req, res) => {
 						tabTitle: 'Meowdy!',
 						users: foundUser
 					});
-				}
-
+				};
 			} else {
 				// passwords don't match
 				res.send('Oops! It looks like that\'s the wrong password! Make sure that you type in your password purr-fectly! <a href="sessions/new">Meow-ch! Try again!</a>');
@@ -51,7 +50,7 @@ sessions.post('/', (req, res) => {
 });
 
 
-// logout
+// logout => ends session
 sessions.delete('/', (req, res) => {
 	req.session.destroy(() => {
 		res.redirect('/sessions/new');

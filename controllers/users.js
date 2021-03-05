@@ -8,17 +8,17 @@ const User = require('../models/users.js');
 
 /*~~~~~ routes ~~~~~*/
 
-// new
+// new => create a new account
 users.get('/new', (req, res) => {
 	res.render('users/new.ejs', {
 		tabTitle: 'Create an Account'
 	});
 });
 
-// create
+// create => push to db
 users.post('/', (req, res) => {
 	req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
-	console.log(req.body)
+	console.log(req.body);
 	User.create(req.body, (err, newUser) => {
 		console.log('user is created: ', newUser);
 		if(newUser.userType === "Volunteer") {
@@ -30,9 +30,8 @@ users.post('/', (req, res) => {
 			res.render('users/first_time_welcome.ejs', {
 				tabTitle: 'Meowdy!',
 				users: newUser
-			})
-		}
-
+			});
+		};
 	});
 });
 

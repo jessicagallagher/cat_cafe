@@ -9,6 +9,7 @@ const User = require('../models/users.js');
 
 /*~~~~~ routes ~~~~~*/
 
+// index => render 3 different views depending on log in status and user type
 cats.get('/', (req, res) => {
 	Cat.find({}, (err, allCats) => {
 		if(req.session.currentUser) {
@@ -21,9 +22,8 @@ cats.get('/', (req, res) => {
 				res.render('cats/visitor_index.ejs', {
 					tabTitle: 'Home',
 					cats: allCats
-				})
-			}
-
+				});
+			};
 		} else {
 			res.render('cats/unauth_index.ejs', {
 				tabTitle: 'Home',
@@ -40,7 +40,7 @@ cats.get('/new', (req, res) => {
 	});
 });
 
-// create => add a cat
+// create => push to db
 cats.post('/', (req, res) => {
 	Cat.create(req.body, (err, createdCat) => {
 		res.render('cats/show.ejs', {
@@ -50,7 +50,7 @@ cats.post('/', (req, res) => {
 	});
 });
 
-// show
+// show => render 3 different views depending on log in status and user type
 cats.get('/:id', (req, res) => {
 	Cat.findById(req.params.id, (err, foundCat) => {
 		if(req.session.currentUser) {
@@ -58,13 +58,13 @@ cats.get('/:id', (req, res) => {
 				res.render('cats/show.ejs', {
 					tabTitle: foundCat.name,
 					cats: foundCat
-				})
+				});
 			} else if(req.session.currentUser.userType === "Visitor") {
 				res.render('cats/visitor_show.ejs', {
 					tabTitle: foundCat.name,
 					cats: foundCat
-				})
-			}
+				});
+			};
 		} else {
 			res.render('cats/unauth_show.ejs', {
 				tabTitle: foundCat.name,
@@ -84,7 +84,7 @@ cats.get('/:id/edit', (req, res) => {
 	});
 });
 
-// update => edit a cat
+// update => push edit to db
 cats.put('/:id', (req, res) => {
 	Cat.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedCat) => {
 		res.render('cats/show.ejs', {

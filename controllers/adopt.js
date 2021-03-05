@@ -9,7 +9,7 @@ const User = require('../models/users.js');
 
 /*~~~~~ routes ~~~~~*/
 
-// new
+// new => render adoption form or force log in / account creation
 adopt.get('/new', (req, res) => {
 	if(req.session.currentUser) {
 		res.render('cats/adoption.ejs', {
@@ -22,14 +22,14 @@ adopt.get('/new', (req, res) => {
 	};
 });
 
-// index-y
+// index-y => confirmation page upon submission of adoption form
 adopt.get('/confirm', (req, res) => {
 	res.render('cats/visitor_adopt_confirm.ejs', {
 		tabTitle: 'Purr-fect!'
 	});
 });;
 
-// create
+// create => push to db
 adopt.post('/', (req, res) => {
 	Adopt.create(req.body, (err, createdAdoption) => {
 		res.redirect('/adopt/confirm')
