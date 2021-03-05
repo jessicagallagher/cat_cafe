@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <%- include ('../partials/head.ejs') %>
+</head>
+
+<body class="has-navbar-fixed-top has-spaced-navbar-fixed-top main">
+  <%- include ('../partials/welcome_back_nav.ejs') %>
+  <!-- refer RESOURCES.md line 16 for credit -->
+  <img class="my-5" id="meowdy" src="/images/meowdy.jpg" alt="cat in a cowboy hat">
+  <h1 class="mt-1" id="index-page">Meowdy, <%=users.firstName%>!</h1>
+  <p class="mt-3 for-welcomes">It's paws-itively great to meet you! We hope you're feline good today! Kitten season came early this year, so get fur-miliar with the site, and make sure to check out our adoptable kittos!</p>
+  <div class="section">
+  </div>
+  <%- include ('../partials/visitor_footer.ejs') %>
+</body>
+
+</html>

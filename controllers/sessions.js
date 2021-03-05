@@ -36,7 +36,10 @@ sessions.post('/', (req, res) => {
 						users: foundUser
 					});
 				} else {
-					res.send('hello');
+					res.render('users/welcome_back.ejs', {
+						tabTitle: 'Meowdy!',
+						users: foundUser
+					});
 				}
 
 			} else {

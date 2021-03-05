@@ -21,10 +21,18 @@ users.post('/', (req, res) => {
 	console.log(req.body)
 	User.create(req.body, (err, newUser) => {
 		console.log('user is created: ', newUser);
-		res.render('users/new_welcome.ejs', {
-			tabTitle: 'Meowdy!',
-			users: newUser
-		});
+		if(newUser.userType === "Volunteer") {
+			res.redirect('users/new_welcome.ejs', {
+				tabTitle: 'Meowdy!',
+				users: newUser
+			});
+		} else {
+			res.render('users/first_time_welcome.ejs', {
+				tabTitle: 'Meowdy!',
+				users: newUser
+			})
+		}
+
 	});
 });
 

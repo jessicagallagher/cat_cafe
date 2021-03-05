@@ -6,14 +6,14 @@
 </head>
 
 <body class="has-navbar-fixed-top has-spaced-navbar-fixed-top main">
-  <%- include ('../partials/unauth_nav.ejs') %>
+  <%- include ('../partials/welcome_back_nav.ejs') %>
   <!-- refer RESOURCES.md line 16 for credit -->
   <img class="my-5" id="meowdy" src="/images/meowdy.jpg" alt="cat in a cowboy hat">
-  <h1 class="mt-1" id="index-page">Meowdy, Partner!</h1>
-  <p class="mt-3" id="meowdy-text">You're gonna need to log in or create an account to submit an adoption form!</p>
+  <h1 class="mt-1" id="index-page">Meowdy, <%=users.firstName%>!</h1>
+  <p class="mt-3 for-welcomes">Welcome back! We hope you're feline good today! Kitten season came early this year, so make sure to check out our adoptable kittos!</p>
   <div class="section">
   </div>
-  <%- include ('../partials/unauth_footer.ejs') %>
+  <%- include ('../partials/visitor_footer.ejs') %>
 </body>
 
 </html>

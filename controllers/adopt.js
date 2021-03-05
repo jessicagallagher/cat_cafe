@@ -5,6 +5,7 @@ const { isAuthenticated } = require('../services/middleware.js');
 
 // models
 const Adopt = require('../models/adoption.js');
+const User = require('../models/users.js');
 
 /*~~~~~ routes ~~~~~*/
 
@@ -22,10 +23,10 @@ adopt.get('/new', (req, res) => {
 });
 
 adopt.get('/confirm', (req, res) => {
-	res.render('cats/adopt_confirm.ejs', {
-		tabTitle: 'Purr-fact!'
+	res.render('cats/visitor_adopt_confirm.ejs', {
+		tabTitle: 'Purr-fect!'
 	});
-});
+});;
 
 // create
 adopt.post('/', (req, res) => {
