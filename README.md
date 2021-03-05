@@ -73,9 +73,8 @@ Finally, this version contains navigation menu items that link to the [Brooklyn 
     - Volunteers are greeted with a welcome page when creating an account or logging in
     - Volunteers' welcome pages are unique to them and contain information regarding their next scheduled shift
     - Volunteers can see all adoptable cats on one page
-    - Visitors can click on a cat and view that cat's details
+    - Volunteers can click on a cat and view that cat's details
     - Volunteers can add, edit, and delete cats
-    - When a visitor submits an adoption form, they'll see a confirmation page
 
 -   Mobile-friendly, responsive design
 
