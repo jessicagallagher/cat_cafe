@@ -22,6 +22,7 @@ adopt.get('/new', (req, res) => {
 	};
 });
 
+// index-y
 adopt.get('/confirm', (req, res) => {
 	res.render('cats/visitor_adopt_confirm.ejs', {
 		tabTitle: 'Purr-fect!'
