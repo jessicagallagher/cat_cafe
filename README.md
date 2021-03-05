@@ -3,13 +3,13 @@
 ## Table of Contents
 
   1. [Description](#description)
-  1. [Ingredients](#ingredients)
-  1. [Features](#features)
-  1. [Sample Wireframe](#sample-wireframe)
-  1. [Sample User Stories](#sample-user-stories)
-  1. [Sample Images](#sample-images)
-  1. [RESTful Routes](#restful-routes)
-  1. [Coming Soon](#coming-soon)
+  1. [Ingredients](#woman_technologist-ingredients)
+  1. [Features](#rocket_features)
+  1. [Sample Wireframe](#framed_picture-sample-wireframe)
+  1. [Sample User Stories](#spiral_notepad-sample-user-stories)
+  1. [Sample Images](#camera_flash-sample-images)
+  1. [RESTful Routes](#world_map-restful-routes)
+  1. [Coming Soon](#ice_cube-coming-soon)
 
 ## Description
 
@@ -51,7 +51,7 @@ Finally, this version contains navigation menu items that link to the [Brooklyn 
     -   postman
     -   Heroku
 
-## Features
+## :rocket: Features
 
 -   Read-Only Experience:
 
